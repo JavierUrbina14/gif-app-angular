@@ -40,9 +40,9 @@ export class GifsService {
 
 
   private loadLocalStorage() : void {
-    if(!localStorage.getItem('history')) return;
-    this._tagsHistory = JSON.parse(localStorage.getItem('history')!)
-    this.searchTag(this._tagsHistory[0])
+    if(!localStorage.getItem('history')) this.searchTag('Kittys');
+    this._tagsHistory = JSON.parse(localStorage.getItem('history')!);
+    this.searchTag(this._tagsHistory[0]);
   }
 
 
